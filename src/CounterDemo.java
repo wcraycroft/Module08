@@ -1,3 +1,16 @@
+/* CounterDemo.java
+ * Author:  William Craycroft
+ * Module:  8
+ * Project: Homework 8 - Project 1
+ * Problem Statement: This class demonstrates the functionality of a Model-View-Controller counter. It will prompt the
+ *      user for a start and end value and start a counter with timestamps.
+ *
+ * Algorithm / Plan:
+ *      1. Prompt user for start and end values
+ *      2. Create a new CounterController object using those values
+ *      3. Call the CounterController start() method.
+ */
+
 import java.util.Scanner;
 
 public class CounterDemo {

@@ -1,18 +1,36 @@
+/* Person.java
+ * Author:     William Craycroft, modified version of Textbook
+ * Module:     8
+ * Project:    Homework 8 - Project 2
+ * Description: This class stores the name, birth date and (if applicable) death date of a person. It is modified to
+ *      include an inner Date class.
+ *
+ *      Instance Variables
+ *          name (String) - the Person's name
+ *          born (Date) - date of birth
+ *          died (Date) - date of death
+ *
+ *      Methods:
+ *          Person (+ 2 overload)
+ *              - Creates a new Person object given their name, birth and death date (as 3 separate Strings)
+ *              - Creates a new (living) Person object given their name and birth date (as 3 separate Strings)
+ *              - Creates a new Person object by making a deep copy of a passed Person object
+ *          set - sets all instance variables given a name and two Date objects.
+ *          toString - returns a String representation of the Person object
+ *          equals - returns true if all instance variables match
+ *          datesMatch - returns true if the two passed dates are equal
+ *          setBirthDate - sets the born (Date) instance variable given 3 String inputs (month, day, year)
+ *          setDeathDate - sets the died (Date) instance variable given 3 String inputs (month, day, year)
+ *          setName - sets the name (String)
+ *          setBirthYear - sets the year in the born (Date) instance variable to the passed int value
+ *          setDeathYear - sets the year in the died (Date) instance variable to the passed int value
+ *          Public Getters for all instance variables
+ *          consistent - returns true if the passed birth date precedes the passed death date
+ *          clone - returns a deep copy of the Person object
+ */
+
 import java.util.Scanner;
 
-/* Person.java - Lightly-modified version of Person class from textbook
- * Author:     Textbook
- * Module:     8
- * Project:    Homework Project 3
- * Description: This class is used throughout the textbook for several demonstrations.
- *
- * Most notable change is that all commas are removed from dates as entered.
- *
- * Class for a person with a name and dates for birth and death.
- * Class invariant: A Person always has a date of birth, and if the Person
- * has a date of death, then the date of death is equal to or later than the
- * date of birth.
- */
 public class Person implements Cloneable {
 
     private String name ;
@@ -214,6 +232,34 @@ public class Person implements Cloneable {
         }
         return copy;
     }
+
+
+    /**     This class stores the name, birth date and (if applicable) death date of a person. It is modified to
+     *          include an inner Date class.
+     *
+     *      Instance Variables
+     *          month (String)
+     *          day (int)
+     *          year (int)
+     *
+     *      Methods:
+     *          Date (+ 4 overload)
+     *              - Creates a new default Date object of January 1, 1000
+     *              - Creates a new Date object given all the instance variables as integers
+     *              - Creates a new Date object given all the instance variables with the month as a String
+     *              - Creates a new Date object give the year, sets the month and day to January 1st
+     *              - Creates a deep copy of the passed Date object
+     *          Getters and Setters for all instance variables which test the validity of the passed month, day and year
+     *          setDate (+1) - sets all instance variables to the passed values (can take month as String or int)
+     *          toString - returns a String representation of the Date object
+     *          equals - returns true if all instance variables match
+     *          precedes - returns true if the current date comes before the passed date
+     *          readInput - send a prompt to the console for the user to enter a month/day/year and sets instance variables
+     *          dateOk (+1) - returns true if the passed month, day and  year are all valid (Month can be String or int)
+     *          monthOk - returns true if the passed String is a valid month
+     *          monthString - returns a String version of the month give its number
+     *          clone - returns a deep copy of the Date object
+     */
 
 
     private class Date{

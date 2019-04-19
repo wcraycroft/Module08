@@ -1,7 +1,7 @@
 /* ComparableMergeSort.java - Perform a merge sort on an array of Comparable Objects
  * Author:     Will Craycroft
  * Module:     8
- * Project:    Lab Project 2
+ * Project:    Lab 8 - UML, Sorting, Comparable Interface
  * Description: This class uses a merge-sort algorithm to sort and array of Comparable Objects
  *
  *    Instance Variables
@@ -21,21 +21,14 @@ public class ComparableMergeSort {
         // do nothing
         if ((end - begin) >= 1) {
 
-            /*******************************************************************
-             * Determine the midpoint between the part of the part of the array
-             * to be sorted
-             ******************************************************************/
+            // Determine the midpoint between the part of the part of the array to be sorted
             int splitPoint = split(a, begin, end) ;
 
-            /*************************************************
-             * Sort the left chunk, then sort the right chunk
-             *************************************************/
+             // Sort the left chunk, then sort the right chunk
             sort(a, begin, splitPoint) ;
             sort(a, splitPoint + 1, end) ;
 
-            /*******************************************************
-             * Merge the two chunks back into a single sorted array
-             *******************************************************/
+            // Merge the two chunks back into a single sorted array
             join(a, begin, splitPoint, end) ;
 
         }

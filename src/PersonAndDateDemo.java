@@ -1,3 +1,19 @@
+/* LabDemo.java
+ * Author:  William Craycroft
+ * Module:  8
+ * Project: Homework 8 - Project 2
+ * Problem Statement: This class demonstrates the functionality of the Person class, its Date inner class and their
+ *      Cloneable interface.
+ *
+ * Algorithm / Plan:
+ *      1. Create a Person object using its full parameterized constructor
+ *      2. Set the birth and death dates
+ *      3. Clone the Person object
+ *      4. Test if clone is equals to the original Person (should return true)
+ *      5. Set the birth and death dates of the clone object, print both objects' toString
+ *      6. Test if clone is equals to the original Person (should return false)
+ */
+
 public class PersonAndDateDemo {
 
     public static void main (String[] args) {
@@ -24,7 +40,7 @@ public class PersonAndDateDemo {
         clone.setBirthDate(birthMonth, birthDay, birthYear);
         clone.setDeathDate(deathMonth, deathDay, deathYear);
 
-        // Test if clone is equals
+        // Display both Person objects' toString()
         System.out.println("After setters...");
         System.out.println(testPerson.toString());
         System.out.println(clone.toString());

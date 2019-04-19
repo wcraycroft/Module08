@@ -1,3 +1,18 @@
+/* LabDemo.java
+ * Author:  William Craycroft
+ * Module:  8
+ * Project: Lab 8 - UML, Sorting, Comparable Interface
+ * Problem Statement: This class demonstrates the functionality of the ComparableMergeSort class which will sort any
+ *      array of Comparable type objects.
+ *
+ * Algorithm / Plan:
+ *      1. Create an array of 4 Comparable type arrays (Characters, Integers, Doubles and Strings)
+ *      2. For each Comparable array
+ *          Print the unsorted array using Arrays.toString()
+ *          Sort the array using ComparableMergeSort.sort()
+ *          Print the sorted array
+ */
+
 import java.util.Arrays;
 
 public class LabDemo {
